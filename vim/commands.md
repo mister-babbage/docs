@@ -63,7 +63,6 @@ Frequently, you will need to go to a specific line. This can be accomplished wit
 #### Scrolling ####
 To scroll half way down the screen, type `Cntrl-D`.
 
-
 ### Deleting 
 
 To delete a character, move the cursor over it and press `x`.
@@ -112,6 +111,21 @@ To list all the marks use `:marks`
 To list a specific mark use `:marks a` wher **a** is the specific mark. 
 
 #### Special Marks ####
+TODO
+
+### Multiple Files ###
+
+#### Tabs ####
+TODO
+
+#### Windows ####
+TODO
+
+#### Buffers ####
+TODO
+
+### Visual Mode ###
+TODO
 
 
 ### Getting Out
