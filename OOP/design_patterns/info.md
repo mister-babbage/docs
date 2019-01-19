@@ -1,2 +1,0 @@
-# OOP Design Patterns
-TODO
