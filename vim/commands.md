@@ -1,5 +1,8 @@
 # Vim Commands
 
+### Repeat Last Change Command ###
+The `.` command repeats the last change command. 
+
 ### Inserting Text
 
 To insert text, press `i`. You will see the lower left hand of the screen change to `--INSERT--`. You can then begin inserting text. 
@@ -14,6 +17,12 @@ To insert text, press `i`. You will see the lower left hand of the screen change
 #### Changing Text ####
 `cw` will delete the next word, similar to `d` but will leave you insert mode. 
 `C` will delete the line nstarting from your cursor position, similar to `D`, but again leave you in insert mode. 
+
+#### Join Lines ####
+The `J` command concatenates the current line with a space followed by the next line.
+
+#### Replacing Characters ####
+To replace **x** with **y** type `ry` when the cursor is over **x**
 
 ### Moving Arround
 
@@ -68,8 +77,44 @@ To delete the next word, type `dw`. To delete the next **3** words type `d3w`.
 
 To undo press `u` and to redo press `Cntrl-r`. 
 
-### Getting Out
+### Searching ###
 
+To perform a simple search use `/string`. 
+> The characters `.*[]ˆ%/\?~$` have special meanings, so to search for those characters prefix with `\`.
+
+#### Highlighting ####
+To highlight results, use `:set hlsearch`
+To turn off highlight, use `:set nohlsearch`
+To disable highlighting, `:set nohlsearch`
+
+#### Incremental Search ####
+To turn on incremental search, `:set incsearch`
+To turn off incremental search, `:set noincsearch`
+
+### Text Blocks ###
+
+#### Putting ####
+When you delete something with `x` or `d` the text is saved. You can paste (technical name is **put**) with the `p` command.
+The `p` command puts the text **after** the cursor, while the `P` command puts the text **before** the cursor. 
+
+#### Yanking ####
+The `y` command (**yanking**) works the same as the `d` command except the text isn't deleted. To yank a word, use `yw`. To yank a line use the `yy` command. To yank a block of text, mark the text and then use `y'a`.
+
+### Marks ###
+Vim allows you to mark your text using `ma`. You can have up to 26 marks. 
+
+Marks can be very useful when deleting blocks of text. Mark the text using `ma`, then go to the end of the block. To delete the block use `d'a`
+
+#### List All Marks ####
+To list all the marks use `:marks`
+
+#### List Specifc Marks ####
+To list a specific mark use `:marks a` wher **a** is the specific mark. 
+
+#### Special Marks ####
+
+
+### Getting Out
 `ZZ` saves and quits. 
 `:q!` quits without saving. 
 
